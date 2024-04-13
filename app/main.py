@@ -13,7 +13,7 @@ def main():
 
     detector = LaneDetector()
 
-    test_image_path = 'data/test_images/example1.jpg'
+    test_image_path = 'data/test_images/example3.jpg'
     test_video_path = 'data/test_videos/example.mp4'
 
     # image proce
