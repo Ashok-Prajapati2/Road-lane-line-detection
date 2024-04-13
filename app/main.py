@@ -16,12 +16,13 @@ def main():
     test_image_path = 'data/test_images/example3.jpg'
     test_video_path = 'data/test_videos/example.mp4'
 
-    # image proce
+   # this code for image
     logger.log_info('Processing image...')
     image = cv2.imread(test_image_path)
     detected_image = detector.detect_lane(image)
-    cv2.imshow('Detected Lanes', detected_image)
-    cv2.destroyAllWindows()
+    # cv2.imshow('Detected Lanes', detected_image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     output_image_path = f'results/images/detected_lane{time.time()}.jpg'
     cv2.imwrite(output_image_path, detected_image)
     logger.log_info(f'Image processed and saved at: {output_image_path}')
@@ -40,8 +41,8 @@ def main():
         detected_frame = detector.detect_lane(frame)
         out.write(detected_frame)
 
-    cap.release()
-    out.release()
+    # cap.release()
+    # out.release()
     cv2.destroyAllWindows()
 
     logger.log_info('Lane detection completed.')
