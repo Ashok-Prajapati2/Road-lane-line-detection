@@ -1,0 +1,12 @@
+name: lane_detection_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - opencv
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - jupyter
+
