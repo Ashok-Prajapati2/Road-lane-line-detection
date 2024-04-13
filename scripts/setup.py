@@ -10,7 +10,6 @@ setup(
     install_requires=[
         'opencv-python',
         'numpy',
-        # Add any other dependencies required by my project
     ],
     entry_points={
         'console_scripts': [
