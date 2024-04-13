@@ -18,13 +18,13 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/lane-detection-project.git
+    git clone https://github.com/Ashok-Prajapati2/Road-lane-line-detection.git
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd lane-detection-project
+    cd Road-lane-line-detection
     pip install -r requirements.txt
     ```
 
@@ -42,7 +42,7 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
 
 ## Contributing
 
-Contributions are welcome! Please follow the [contributing guidelines](CONTRIBUTING.md) to contribute to this project.
+Contributions are welcome! 
 
 ## License
 
@@ -50,10 +50,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- This project was inspired by [Lane Detection using OpenCV](https://github.com/yourusername/lane-detection-opencv) by [Author Name](https://github.com/authorname).
-- Special thanks to [Contributor Name](https://github.com/contributorname) for their valuable contributions.
+- This project was inspired by [Lane Detection using OpenCV](https://github.com/Ashok-Prajapati2/Road-lane-line-detection.git) by [Ashok Kumar](https://github.com/Ashok-Prajapati2).
+
 
 ## Contact
 
-For questions or feedback, please contact [Your Name](mailto:youremail@example.com).
+For questions or feedback, please contact [Ashok Kumar](mailto:ap86963163@gmail.com).
 
