@@ -23,13 +23,13 @@ class LaneDetector:
         
         # Dummy lane detection (replace this with your actual algorithm)
         # Example: Detect lanes using Hough Transform
-        lines = cv2.HoughLinesP(processed_image, rho=1, theta=np.pi/180, threshold=50, minLineLength=100, maxLineGap=50)
+        # lines = cv2.HoughLinesP(processed_image, rho=1, theta=np.pi/180, threshold=50, minLineLength=100, maxLineGap=50)
         
         # Create a blank image to draw lines on
         lane_image = np.zeros_like(image)
         
         # Draw detected lanes on the blank image
-        draw_lane_lines(lane_image, lines)
+        # draw_lane_lines(lane_image, lines)
         
         # Combine the original image with the lane lines
         detected_image = cv2.addWeighted(image, 0.8, lane_image, 1, 1)
