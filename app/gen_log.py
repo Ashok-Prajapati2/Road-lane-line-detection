@@ -11,7 +11,9 @@ class Logger:
         os.makedirs(self.log_dir, exist_ok=True)
         logging.basicConfig(filename=os.path.join(self.log_dir, self.log_file),
                             level=logging.INFO,
-                            format='%(asctime)s - %(levelname)s - %(message)s')
+                            format='%(asctime)s - %(levelname)s - %(message)s',
+                            filemode='w')  
+
 
     def log_info(self, message):
         logging.info(message)
@@ -27,3 +29,6 @@ class Logger:
 
     def log_debug(self, message):
         logging.debug(message)
+    def get_log_file_path(self):
+        log_file_path = 'results/logs/app.log'
+        return log_file_path
