@@ -6,6 +6,7 @@ from lane_detection.detector import LaneDetector
 from app.gen_log import Logger
 import time
 
+
 def main():
     logger = Logger()
     logger.log_info('Starting lane detection...')
@@ -16,8 +17,8 @@ def main():
         logger.log_error(f"Error initializing lane detector: {e}")
         return
 
-    test_image_path = 'data/test_images/example0.jpg'
-    test_video_path = 'data/test_videos/example.mp4'
+    test_image_path = f'data/test_images/example{i}.jpg'
+    test_video_path = 'data/test_videos/example00.mp4'
 
     # Process image
     logger.log_info('Processing image...')
