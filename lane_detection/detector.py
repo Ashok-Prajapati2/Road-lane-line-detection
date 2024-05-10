@@ -5,7 +5,6 @@ from .utils import draw_lane_lines
 
 class LaneDetector:
     def __init__(self):
-        # Initialize any parameters or variables needed for the detector
         pass
 
     def detect_lane(self, image):
@@ -21,7 +20,7 @@ class LaneDetector:
         # Preprocess image
         processed_image = preprocess_image(image)
         
-        # Dummy lane detection (replace this with your actual algorithm)
+        # Dummy lane detection (replace this with actual algorithm leter)
         # Example: Detect lanes using Hough Transform
         # lines = cv2.HoughLinesP(processed_image, rho=1, theta=np.pi/180, threshold=50, minLineLength=100, maxLineGap=50)
         

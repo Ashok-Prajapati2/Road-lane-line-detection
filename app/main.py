@@ -17,7 +17,7 @@ def main():
         logger.log_error(f"Error initializing lane detector: {e}")
         return
 
-    test_image_path = f'data/test_images/example1.jpg'
+    test_image_path = f'data/test_images/example0.jpg'
     test_video_path = 'data/test_videos/example00.mp4'
 
     # Process image
