@@ -18,7 +18,7 @@ class LaneDetector:
             numpy.ndarray: Image with detected lanes drawn on it.
         """
         # Preprocess image
-        processed_image,masks = preprocess_image(image)
+        processed_image = preprocess_image(image)
         
         # Dummy lane detection (replace this with actual algorithm leter)
         # Example: Detect lanes using Hough Transform
@@ -33,5 +33,5 @@ class LaneDetector:
         # Combine the original image with the lane lines
         detected_image = cv2.addWeighted(image, 0.8, lane_image, 1, 1)
         
-        return detected_image,masks
+        return detected_image
 
