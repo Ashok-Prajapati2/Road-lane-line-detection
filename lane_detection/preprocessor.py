@@ -38,7 +38,8 @@ def preprocess_image(image):
     image[mask > 0] = (0, 255, 0)  # Green color
 
     # Display the result
-    # cv2.imshow('Yellow to Green', image)
+    # cv2.imshow('Yellow to Green', mask)
+    # cv2.waitKey(0)
     
-    return image
+    return image,mask
 
