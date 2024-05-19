@@ -20,7 +20,7 @@ def main():
         return
 
     # Set test image and video paths
-    test_image_path = f'data/images/example0.jpg'
+    test_image_path = f'data/images/example5.jpg'
     test_video_path = 'data/test_videos/example00.mp4'
 
     # Process image
@@ -34,8 +34,8 @@ def main():
     detected_image, masks = detector.detect_lane(image)
 
     # Save detected image and mask
-    output_image_path = f'results/images/detected_lane{time.time()}.jpg'
-    output_mask_path = f'results/masks/detected_lane{time.time()}_mask.png'
+    output_image_path = f'results/images/detected_lane.jpg'
+    output_mask_path = f'results/masks/detected_lane_mask.png'
     cv2.imwrite(output_mask_path, masks)
     cv2.imwrite(output_image_path, detected_image)
     logger.log_info(f'Image processed and saved at: {output_image_path}')
