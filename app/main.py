@@ -5,8 +5,6 @@ import os
 from lane_detection.detector import LaneDetector
 from app.gen_log import Logger
 import time
-
-
 def main():
     logger = Logger()
     logger.log_info('Starting lane detection...')
@@ -17,8 +15,8 @@ def main():
         logger.log_error(f"Error initializing lane detector: {e}")
         return
 
-    test_image_path = f'data/test_images/example0.jpg'
-    test_video_path = 'data/test_videos/example00.mp4'
+    test_image_path = f'data/test_images/example5.jpg'
+    test_video_path = 'data/test_videos/example01.mp4'
 
     # Process image
     logger.log_info('Processing image...')
@@ -27,11 +25,15 @@ def main():
         logger.log_error("Failed to load the test image.")
         return
 
-    detected_image = detector.detect_lane(image)
-    output_image_path = f'results/images/detected_lane{time.time()}.jpg'
+    detected_image,mask = detector.detect_lane(image)
+    output_image_path = f'results/images/detected_lane.jpg'
     cv2.imwrite(output_image_path, detected_image)
-    logger.log_info(f'Image processed and saved at: {output_image_path}')
 
+    logger.log_info(f'Image processed and saved at: {output_image_path}')
+    output_mask_path = f'results/masks/detected_lane_mask.jpg'
+    cv2.imwrite(output_mask_path, mask)
+
+    logger.log_info(f'Image processed and saved at: {output_mask_path}')
     # Process video
     logger.log_info('Processing Video...')
     try:

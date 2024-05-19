@@ -40,5 +40,5 @@ def preprocess_image(image):
     # Display the result
     # cv2.imshow('Yellow to Green', image)
     
-    return image
+    return image,mask
 
