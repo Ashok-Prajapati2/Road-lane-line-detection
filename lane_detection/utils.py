@@ -11,7 +11,6 @@ def draw_lane_lines(image, lines, color=(0, 255, 0), thickness=5):
         color (tuple): Color of the lines in BGR format.
         thickness (int): Thickness of the lines.
     """
-    # Iterate over the lines and draw them on the image
     if lines is not None:
         for line in lines:
             x1, y1, x2, y2 = line[0]

@@ -5,6 +5,7 @@ import os
 from lane_detection.detector import LaneDetector
 from app.gen_log import Logger
 import time
+
 def main():
     logger = Logger()
     logger.log_info('Starting lane detection...')
@@ -15,8 +16,8 @@ def main():
         logger.log_error(f"Error initializing lane detector: {e}")
         return
 
-    test_image_path = f'data/test_images/example5.jpg'
-    test_video_path = 'data/test_videos/example01.mp4'
+    test_image_path = 'data/test_images/example5.jpg'
+    test_video_path = 'data/test_videos/example2.mp4'
 
     # Process image
     logger.log_info('Processing image...')
@@ -25,15 +26,19 @@ def main():
         logger.log_error("Failed to load the test image.")
         return
 
-    detected_image,mask = detector.detect_lane(image)
-    output_image_path = f'results/images/detected_lane.jpg'
-    cv2.imwrite(output_image_path, detected_image)
+    try:
+        detected_image, mask = detector.detect_lane(image)
+        output_image_path = 'results/images/detected_lanet.jpg'
+        cv2.imwrite(output_image_path, detected_image)
+        logger.log_info(f'Image processed and saved at: {output_image_path}')
 
-    logger.log_info(f'Image processed and saved at: {output_image_path}')
-    output_mask_path = f'results/masks/detected_lane_mask.jpg'
-    cv2.imwrite(output_mask_path, mask)
+        output_mask_path = 'results/masks/detected_lane_mask.jpg'
+        cv2.imwrite(output_mask_path, mask)
+        logger.log_info(f'Image processed and saved at: {output_mask_path}')
+    except Exception as e:
+        logger.log_error(f"Error processing image: {e}")
+        return
 
-    logger.log_info(f'Image processed and saved at: {output_mask_path}')
     # Process video
     logger.log_info('Processing Video...')
     try:
@@ -45,18 +50,30 @@ def main():
         frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps = int(cap.get(cv2.CAP_PROP_FPS))
-        output_video_path = f'results/videos/detected_lane{time.time()}.mp4'
-        out = cv2.VideoWriter(output_video_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+        output_video_path = f'results/videos/detected_lane_{time.time()}.mp4'
+        output_mask_video_path = f'results/videos/detected_lane_mask_{time.time()}.mp4'
+        
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
+        out_mask = cv2.VideoWriter(output_mask_video_path, fourcc, fps, (frame_width, frame_height))
 
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
                 break
 
-            detected_frame = detector.detect_lane(frame)
-            out.write(detected_frame)
+            try:
+                detected_frame, mask = detector.detect_lane(frame)
+                out.write(detected_frame)
+                out_mask.write(mask)
+            except Exception as e:
+                logger.log_error(f"Error processing frame: {e}")
 
-        logger.log_info(f'Video  processed and saved at: {output_video_path }')
+        cap.release()
+        out.release()
+        out_mask.release()
+        logger.log_info(f'Video processed and saved at: {output_video_path}')
+        logger.log_info(f'Mask video processed and saved at: {output_mask_video_path}')
         logger.log_info('Lane detection completed.')
     except Exception as e:
         logger.log_error(f"Error processing video: {e}")
