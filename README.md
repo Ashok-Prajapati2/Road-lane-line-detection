@@ -2,6 +2,21 @@
 
 This project implements a lane detection system using computer vision techniques and deep learning.
 
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+
 ## Introduction
 
 Lane detection is a crucial component of advanced driver assistance systems (ADAS) and autonomous vehicles. This project aims to develop a robust lane detection algorithm capable of accurately identifying lane boundaries in images and videos captured by a vehicle's onboard camera.
