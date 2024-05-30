@@ -9,11 +9,8 @@ This project implements a lane detection system using computer vision techniques
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
-- [Training](#training)
-- [Evaluation](#evaluation)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 
@@ -27,6 +24,9 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
 - Supports real-time lane detection.
 - Provides visualization of detected lanes overlaid on input images/videos.
 - Supports both straight and curved lane detection.
+- Uses deep learning models for enhanced accuracy.
+- Logs training and evaluation metrics for model performance analysis.
+
 
 ## Installation
 
@@ -55,6 +55,16 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
 2. Run the application using the provided instructions.
 3. View the output results in the `results/` directory.
 
+
+
+## Configuration
+
+Configuration files are located in the `config/` directory:
+
+- `environment.yml`: Specifies the conda environment setup.
+- `parameters.json`: Contains configurable parameters for the lane detection algorithm.
+
+
 ## Contributing
 
 Contributions are welcome! 
@@ -71,4 +81,76 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For questions or feedback, please contact [Ashok Kumar](mailto:ap86963163@gmail.com).
+
+
+## Examples
+
+### Images
+
+Here are some examples of lane detection on input images:
+
+![Detected Lane 1](results/images/detected_lane1.jpg)
+![Detected Lane 2](results/images/detected_lane.jpg)
+![Detected Lane 3](results/images/detected_lanet.jpg)
+
+### Videos
+
+Here are some examples of lane detection on input videos:
+
+- [Example Video 1](results/videos/detected_lane_1716694824.7354543.mp4)
+- [Example Video 2](results/videos/detected_lane_1716694942.5413072.mp4)
+- [Example Video 3](results/videos/detected_lane_1716695074.6446207.mp4)
+- [Example Video 4](results/videos/detected_lane_1716695496.300908.mp4)
+- [Example Video 5](results/videos/detected_lane_1716695525.7180731.mp4)
+
+
+## Project Structure
+
+Road-lane-line-detection/
+├── app/
+│ ├── gen_log.py
+│ ├── init.py
+│ ├── main.py
+├── build/
+│ └── lib/
+│ ├── app/
+│ └── lane_detection/
+├── config/
+│ ├── environment.yml
+│ └── parameters.json
+├── data/
+│ └── test_videos/
+├── dist/
+│ └── lane_detection-1.0-py3.12.egg
+├── docs/
+│ ├── development.md
+│ ├── model.pdf
+│ └── project_work.docx
+├── lane_detection/
+│ ├── detector.py
+│ ├── init.py
+│ ├── preprocessor.py
+│ ├── tracker.py
+│ └── utils.py
+├── models/
+│ ├── logs/
+│ ├── model.ipynb
+│ ├── model_link.txt
+│ ├── outputs/
+│ ├── sample_data/
+│ └── testing/
+├── notebooks/
+│ ├── lane_detection.ipynb
+│ ├── logs/
+│ ├── model_test.ipynb
+│ └── outputs/
+├── results/
+│ ├── images/
+│ ├── logs/
+│ ├── masks/
+│ └── videos/
+├── scripts/
+│ └── setup.py
+├── README.md
+├── requirements.txt
 
