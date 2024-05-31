@@ -1,11 +1,16 @@
 import sys
-sys.path.insert(1,r"/home/ashok/Desktop/github project/Road-lane-line-detection/")
 import cv2
 import os
 from lane_detection.detector import LaneDetector
 from app.gen_log import Logger
 import time
-
+try:
+    path = os.getcwd()
+    # sys.path.insert(1,r"/home/ashok/Desktop/github project/Road-lane-line-detection/")
+    sys.path.insert(1,path)
+except Exception as e:
+    print("Error in adding path",e)
+    
 def main():
     logger = Logger()
     logger.log_info('Starting lane detection...')
