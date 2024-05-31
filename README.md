@@ -89,15 +89,16 @@ For questions or feedback, please contact [Ashok Kumar](mailto:ap86963163@gmail.
 Here are some examples of lane detection on input images:
 
 ![Detected Lane 1](results/images/detected_lane1.jpg)
-![Detected Lane 2](results/images/detected_lane.jpg)
-![Detected Lane 3](results/images/detected_lanet.jpg)
+![Detected Lane 2](notebooks/outputs/processed_example1.jpg)
+![Detected Lane 3](notebooks/outputs/processed_example3.jpg)
+![Detected Lane 4](notebooks/outputs/processed_example6.jpg)
 
 ### Videos
 
 Here are some examples of lane detection on input videos:
 
-- [Example Video 1](results/videos/detected_lane_mask_1716694942.5413225.mp4)
-- [Example Video 2](results/videos/detected_lane_1716694942.5413072.mp4)
-- [Example Video 3](results/videos/detected_lane_1716695074.6446207.mp4)
-- [Example Video 4](results/videos/detected_lane_1716695496.300908.mp4)
-- [Example Video 5](results/videos/detected_lane_1716695525.7180731.mp4)
+- [Video 1](results/videos/detected_lane_mask_1716694942.5413225.mp4)
+- [Video 2](results/videos/detected_lane_1716694942.5413072.mp4)
+- [Video 3](results/videos/detected_lane_1716695074.6446207.mp4)
+- [Video 4](results/videos/detected_lane_1716695496.300908.mp4)
+- [Video 5](/models/testing/challenge.mp4)
