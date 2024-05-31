@@ -7,12 +7,11 @@ This project implements a lane detection system using computer vision techniques
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-
+- [Examples](#examples)
 
 ## Introduction
 
@@ -97,7 +96,7 @@ Here are some examples of lane detection on input images:
 
 Here are some examples of lane detection on input videos:
 
-- [Example Video 1](results/videos/detected_lane_1716694824.7354543.mp4)
+- [Example Video 1](results/videos/detected_lane_mask_1716694942.5413225.mp4)
 - [Example Video 2](results/videos/detected_lane_1716694942.5413072.mp4)
 - [Example Video 3](results/videos/detected_lane_1716695074.6446207.mp4)
 - [Example Video 4](results/videos/detected_lane_1716695496.300908.mp4)
