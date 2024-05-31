@@ -106,5 +106,5 @@ Here are some examples of lane detection on input videos:
 
 ### Project Doc
 
-- [Doc](/docs/project_work.docx)
+- [Doc](/docs/model.pdf)
 
