@@ -91,7 +91,7 @@ Here are some examples of lane detection on input images:
 ![Detected Lane 1](results/images/detected_lane1.jpg)
 ![Detected Lane 2](notebooks/outputs/processed_example1.jpg)
 ![Detected Lane 3](notebooks/outputs/processed_example3.jpg)
-![Detected Lane 4](notebooks/outputs/processed_example6.jpg)
+![Detected Lane 4](/models/outputs/17.png)
 
 ### Videos
 
@@ -108,3 +108,5 @@ Here are some examples of lane detection on input videos:
 
 - [Doc](/docs/model.pdf)
 
+## Model
+- [Model](https://drive.google.com/file/d/1G6ANBYpWUENjda6dgxAp77RduZ1slLnC/view?usp=drive_link)
