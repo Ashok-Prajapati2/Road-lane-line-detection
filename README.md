@@ -102,3 +102,9 @@ Here are some examples of lane detection on input videos:
 - [Video 3](results/videos/detected_lane_1716695074.6446207.mp4)
 - [Video 4](results/videos/detected_lane_1716695496.300908.mp4)
 - [Video 5](/models/testing/challenge.mp4)
+
+
+### Project Doc
+
+- [Doc](/docs/project_work.docx)
+
