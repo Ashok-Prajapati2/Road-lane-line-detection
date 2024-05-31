@@ -17,7 +17,7 @@ def main():
         return
 
     test_image_path = 'data/test_images/example5.jpg'
-    test_video_path = 'data/test_videos/example2.mp4'
+    test_video_path = 'data/test_videos/example1.mp4'
 
     # Process image
     logger.log_info('Processing image...')

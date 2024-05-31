@@ -48,6 +48,9 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
     python app/main.py
     ```
 
+    ```bash
+    model/model.ipynb
+    ```
 ## Usage
 
 1. Place input images or videos in the `data/test_images/` or `data/test_videos/` directory.
@@ -106,7 +109,7 @@ Here are some examples of lane detection on input videos:
 
 ### Project Doc
 
-- [Doc](/docs/model.pdf)
+- [Doc](/docs/project_work.pdf)
 
 ## Model
 - [Model](https://drive.google.com/file/d/1G6ANBYpWUENjda6dgxAp77RduZ1slLnC/view?usp=drive_link)
