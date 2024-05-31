@@ -57,7 +57,19 @@ Lane detection is a crucial component of advanced driver assistance systems (ADA
 2. Run the application using the provided instructions.
 3. View the output results in the `results/` directory.
 
+or 
 
+1. Place input images  in the `notebooks/test_images` directory.
+2. Run the script using the jupyter notbook or colob . 
+3. View the output results in the `notebooks/outputs` directory.
+
+or 
+
+1. Place input  videos in the `models/testing`  directory.
+2. Run the script using the jupyter notbook or colob . 
+3. View the output results in the `models/videos` or `models/output` directory.
+
+```bash change the image and videos name in `app/main.py` and notebooks.```
 
 ## Configuration
 
